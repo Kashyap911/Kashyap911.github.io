@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #444; /* Medium dark grey */
+            color: #f0f0f0; /* Light grey text color */
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header .container {
+            background-color: #444; /* Medium dark grey */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header .header-image {
+            max-width: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #1e90ff;
+        }
+
+        header .social-links {
+            margin-top: 10px;
+        }
+
+        header .social-links a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-size: 24px;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+        }
+
+        header .social-links a:hover {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.75em;
+            color: #1e90ff;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about-content .about-text {
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .project-carousel .project-item {
+            padding: 20px;
+            background-color: #f7f7f7;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+        }
+
+        .project-carousel .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: grey;
+            color: white;
+        }
+
+        .project-carousel .project-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+
+        .skills-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skills-content .skill-item {
+            flex: 1;
+            min-width: 220px;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: grey;
+        }
+
+        .skills-content .skill-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .skills-content .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: grey;
+            color: white;
+        }
+
+        footer {
+            background-color: #444;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #444; /* Medium dark grey */
+        }
+
+        footer .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 10px 0;
+        }
+
+        footer .social-links li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        footer .social-links a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .about-content {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .skills-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-carousel .project-item {
+                padding: 15px;
+            }
+
+            footer .social-links a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="account.png" alt="Profile Picture" class="header-image">
+            <h1>Krrish</h1>
+            <div class="social-links">
+                <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I am Krrish, an architecture student with a passion for designing innovative and sustainable structures. Welcome to my portfolio where you can see the projects I have worked on.</p>
+                    <p>I believe that architecture is not just about creating buildings, but about creating spaces that inspire and enhance the quality of life. I strive to incorporate sustainable practices in all my designs to ensure that they are not only aesthetically pleasing but also environmentally responsible.</p>
+                    <p>Through my academic journey and various projects, I have developed a strong foundation in architectural design, urban planning, and sustainable construction techniques. I am always eager to learn and embrace new challenges that push the boundaries of conventional architecture.</p>
+                    <p>Feel free to explore my projects and get in touch if you'd like to collaborate or discuss my work. Let's create something amazing together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <img src="architect_desiging.jpg" alt="Architectural Design Image">
+                    <h3>Architectural Design</h3>
+                    <p>Proficient in creating functional and aesthetic architectural designs using AutoCAD and Revit.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="urban_planning.jpg" alt="Urban Planning Image">
+                    <h3>Urban Planning</h3>
+                    <p>Experience in developing sustainable urban plans that integrate with community needs.</p>
+                </div>
+                <div class="skill-item">
+                    <img src=" 3d_modelling.jpg" alt="3D Modeling Image">
+                    <h3>3D Modeling</h3>
+                    <p>Skilled in creating detailed 3D models and visualizations using SketchUp and Rhino.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="environmental_designing.jpg" alt="Environmental Design Image">
+                    <h3>Environmental Design</h3>
+                    <p>Knowledge of sustainable design practices that reduce environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <a href="residential.html">
+            <div class="project-carousel">
+                <!-- Repeat this block for each project -->
+                <div class="project-item">
+                    <img src="image_1.jpg" alt="Project 1">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project-item">
+                    <img src="image_2.jpg" alt="Project 1">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project-item">
+                    <img src="image_3.jpg" alt="Project 1">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project-item">
+                    <img src="image_4.jpg" alt="Project 1">
+                    <h3>Residencial Project </h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project-item">
+                    <img src="image_5.jpg" alt="Project 1">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Krrish. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.project-carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
